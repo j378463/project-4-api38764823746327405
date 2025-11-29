@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Declares UTF-8 character encoding – supports special characters and emojis properly -->
+    <title>Greatest Hits - Longest-Running #1 Songs Ever</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the page responsive: width matches device screen, initial zoom level is 100% -->
+
+    <!-- External stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- normalize.css removes browser-specific default styling so all browsers render elements consistently -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Main stylesheet – contains the entire CSS Grid layout using named grid areas -->
+</head>
+<body>
+<!-- Page wrapper – centers content horizontally and sets a maximum width for large screens -->
+<div class="wrapper">
+
+    <!-- Main CSS Grid container – the magic happens in style.css with grid-template-areas -->
+    <div class="grid-container">
+
+        <!-- ==================== TOP 4 FEATURED CARDS (Largest items) ==================== -->
+        <!-- Each featured card uses inline style="grid-area: XXX" to explicitly place it in the named grid area defined in CSS -->
+        <article class="card featured" style="grid-area: item1;">
+            <!-- "card" = base card styling (padding, background, border-radius, shadow) -->
+            <!-- "featured" = larger size, bolder text, different background for top songs -->
+            <!-- grid-area: item1 → places this exact card in the "item1" region defined in the grid-template-areas in style.css -->
+            <h3>#1 – Old Town Road</h3>
+            <img src="https://media.gq.com/photos/5cdeef0e1f8a4e271cddab8d/1:1/w_689,h_689,c_limit/Old-Town-Road-Video-GQ-2019-051719.jpg" alt="Old Town Road - Lil Nas X">
+            <p><strong>Lil Nas X ft. Billy Ray Cyrus</strong><br>19 weeks at #1 (2019)<br>Longest-running #1 in Billboard history</p>
+            <p><a href="https://www.youtube.com/watch?v=w2Ov5jzm3j8" target="_blank" rel="noopener noreferrer">Watch Video</a></p>
+            <!-- target="_blank" opens link in new tab -->
+            <!-- rel="noopener noreferrer" → security (prevents new page from accessing window.opener) + performance best practice -->
+        </article>
+
+        <article class="card featured" style="grid-area: item2;">
+            <h3>#2 – Despacito</h3>
+            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2017_29/2078796/170720-luis-fonsi-daddy-yankee-despacito-latino-1000a.jpg" alt="Despacito - Luis Fonsi & Daddy Yankee">
+            <p><strong>Luis Fonsi & Daddy Yankee ft. Justin Bieber</strong><br>16 weeks (2017)</p>
+            <p><a href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" target="_blank" rel="noopener noreferrer">Watch Video</a></p>
+        </article>
+
+        <article class="card featured" style="grid-area: item3;">
+            <h3>#3 – One Sweet Day</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b2/One_Sweet_Day_Mariah_Carey.png" alt="One Sweet Day - Mariah Carey & Boyz II Men">
+            <p><strong>Mariah Carey & Boyz II Men</strong><br>16 weeks (1995–1996)</p>
+            <p><a href="https://www.youtube.com/watch?v=UXxRyNvTPr8" target="_blank" rel="noopener noreferrer">Watch Video</a></p>
+        </article>
+
+        <article class="card featured" style="grid-area: item4;">
+            <h3>#4 – Uptown Funk</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzJTq8QLACO3lbcOnr48nuMbfudM17X2SGZw&s" alt="Uptown Funk - Mark Ronson ft. Bruno Mars">
+            <p><strong>Mark Ronson ft. Bruno Mars</strong><br>14 weeks (2015)</p>
+            <p><a href="https://www.youtube.com/watch?v=OPf0YbXqDm0" target="_blank" rel="noopener noreferrer">Watch Video</a></p>
+        </article>
+
+        <!-- ==================== SECONDARY HIGHLIGHT CARDS ==================== -->
+        <article class="card highlight" style="grid-area: highlight1;">
+            <!-- "highlight" class = medium-sized cards with different background/color scheme -->
+            <h3>Blinding Lights</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/e6/The_Weeknd_-_Blinding_Lights.png" alt="Blinding Lights - The Weeknd">
+            <p><strong>The Weeknd</strong><br>4 weeks at #1 · 90+ weeks in Top 10<br>Most weeks ever in the Top 10</p>
+            <p><a href="https://www.youtube.com/watch?v=4NRXxU8ABQ" target="_blank" rel="noopener noreferrer">Watch Video</a></p>
+        </article>
+
+        <article class="card highlight" style="grid-area: highlight2;">
+            <h3>Shape of You</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png" alt="Shape of You - Ed Sheeran">
+            <p><strong>Ed Sheeran</strong><br>12 weeks at #1 (2017)<br>Most-streamed song ever on Spotify</p>
+            <p><a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" target="_blank" rel="noopener noreferrer">Watch Video</a></p>
+        </article>
+
+        <!-- ==================== SIDEBAR / INFO PANELS ==================== -->
+        <article class="card info-left" style="grid-area: info1;">
+            <!-- info-left/info-right = sidebar-style cards, usually narrower -->
+            <h3>Chart Facts</h3>
+            <img src="https://www.kbaudio.co.uk/cdn/shop/articles/guide-to-vinyl-record-sizes-speeds-617420.jpg?v=1737435608" alt="Vinyl records">
+            <p>Only 21 songs have ever spent 10+ weeks at #1.<br>Mariah Carey holds the record for most weeks at #1 overall (91).</p>
+            <p><a href="https://www.billboard.com/charts/hot-100/" target="_blank" rel="noopener noreferrer">Current Chart</a></p>
+        </article>
+
+        <article class="card info-right" style="grid-area: info2;">
+            <h3>How They're Ranked</h3>
+            <img src="https://images.macrumors.com/t/AMwbTGrfT9s_8c9XTrDIh09uawQ=/1600x/article-new/2018/09/applemusictopcharts.jpg" alt="Music charts">
+            <p>1. Total weeks at #1<br>2. Cultural impact<br>3. Streaming & sales records<br>4. Legacy & influence</p>
+            <p><a href="https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_chart_achievements_and_milestones" target="_blank" rel="noopener noreferrer">Full List</a></p>
+        </article>
+
+        <!-- ==================== FULL-WIDTH BANNER SECTION ==================== -->
+        <article class="card full" style="grid-area: fullwidth;">
+            <!-- "full" class + grid-area: fullwidth → spans all columns of the grid (defined in CSS as "span all") -->
+            <h3>Why These Songs Chart</h3>
+            <img src="https://t4.ftcdn.net/jpg/06/00/62/77/360_F_600627754_uKAUfEHyXUdPHlZWldI47Z5TqZpGKhB7.jpg" alt="Concert crowd">
+            <p>These are the kinds of tracks that define generations and break records.</p>
+            <p><a href="https://www.youtube.com/playlist?list=PLMcQ2mtzgn9_8tJ3ZqZyXb7n9vY7p8k9Z" target="_blank" rel="noopener noreferrer">Play All Videos</a></p>
+        </article>
+
+        <!-- ==================== SMALL STAT / TIP BOXES ==================== -->
+        <article class="card tip" style="grid-area: tip1;">
+            <!-- "tip" = smallest cards, often used for quick stats -->
+            <h3>Longest Reigns by Decade</h3>
+            <img src="https://www.rollingstone.com/wp-content/uploads/2018/06/rs_lead_summersongs1950-a038af2d-d382-4ded-a5f2-d51d92048371.jpg?w=1401&h=788&crop=1" alt="1950s record">
+            <p>1950s: 10 weeks<br>1990s: 16 weeks<br>2010s: 19 weeks</p>
+        </article>
+
+        <article class="card tip middle" style="grid-area: tip2;">
+            <!-- "middle" class just adds extra margin/padding or centering if needed -->
+            <h3>Most Weeks at #1</h3>
+            <img src="https://www.nationalworld.com/jpim-static/image/2024/12/17/8/10/2025-music-award-ceremony-dates-hero.png?crop=3:2,smart&trim=&width=1200&auto=webp&quality=75" alt="Trophy">
+            <p>1. Old Town Road – 19<br>2. Despacito / One Sweet Day – 16<br>4. Uptown Funk – 14</p>
+        </article>
+
+        <article class="card tip" style="grid-area: tip3;">
+            <h3>Most #1 Hits Ever</h3>
+            <img src="https://www.hollywoodreporter.com/wp-content/uploads/2018/01/splash_grammys.jpg?w=1500&h=844&crop=1" alt="Superstars">
+            <p>Beatles – 20<br>Mariah Carey – 19<br>Rihanna – 14<br>Drake – 13</p>
+        </article>
+
+        <!-- ==================== TESTIMONIAL QUOTES (Simple styling) ==================== -->
+        <!-- These are plain <div>s (not articles) so they can be styled lighter than cards -->
+        <div class="testimonial" style="grid-area: quote1;">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Fan">
+            <p>"Old Town Road was EVERYWHERE for an entire summer!"</p>
+        </div>
+        <div class="testimonial" style="grid-area: quote2;">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Fan">
+            <p>"Despacito became the most viewed YouTube video!"</p>
+        </div>
+        <div class="testimonial" style="grid-area: quote3;">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Fan">
+            <p>"I love listening to One Sweet Day."</p>
+        </div>
+        <div class="testimonial" style="grid-area: quote4;">
+            <img src="https://randomuser.me/api/portraits/men/86.jpg" alt="Fan">
+            <p>"Uptown Funk = instant dance party!"</p>
+        </div>
+        <div class="testimonial" style="grid-area: quote5;">
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Fan">
+            <p>"These songs are in all my playlists."</p>
+        </div>
+
+    </div> <!-- End of .grid-container – all layout is controlled by grid-template-areas in style.css -->
+</div> <!-- End of .wrapper -->
+</body>
+</html>
